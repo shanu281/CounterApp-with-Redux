@@ -1,30 +1,20 @@
 import {connect} from 'react-redux'
+import Steps from '../Steps';
+import {increment, decrement, reset} from '../../Store/Actions'
 function App(props){
 
-function handleIncrement(){
-    props.dispatch({
-        type: 'increment'
-    });
-}
-function handleDecrement(){
-    props.dispatch({
-        type: 'decrement'
-    });
-}
-function handleReset(){
-    props.dispatch({
-        type: 'reset'
-    }); 
-}
+
+
     return(
         <>
         <center>
 
         <h1>Counter App</h1>
         <h1>{props.count}</h1>
-        <button onClick={handleIncrement}>Increment</button>
-        <button onClick={handleDecrement}>Decrement</button>
-        <button onClick={handleReset}>Reset</button>
+        <Steps/>
+        <button onClick={()=> props.dispatch(increment())}>Increment</button>
+        <button onClick={() => props.dispatch(decrement())}>Decrement</button>
+        <button onClick={() =>props.dispatch (reset())}>Reset</button>
         </center>
         </>
     )
