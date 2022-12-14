@@ -21,3 +21,9 @@ export function updateStep(step){
         payLoad : step,
     }
 }
+export function updateMax(max){
+  return{
+    type: 'changeMax',
+    payLoad: max,
+  }
+}

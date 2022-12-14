@@ -1,0 +1,6 @@
+.max-container {
+  width: 250px;
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem;
+}
